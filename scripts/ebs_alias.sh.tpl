@@ -4,7 +4,7 @@
 
 echo "Create a temporary symbolic link to retrieve UUID on first boot"
 
-VOLUMES_NAME=$(find /dev | grep -i 'nvme[0-21]n1$')
+VOLUMES_NAME=$(find /dev | grep -i 'nvme[1-2]\?[0-9]n1$')
 echo "---> volumes list:"
 echo $${VOLUMES_NAME[@]} | tr " " "\n"
 
